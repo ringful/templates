@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <link href="css/bootstrap.css" rel="stylesheet"/>
+        <link href="css/bootstrap-responsive.css" rel="stylesheet"/>
+        
+        <style type="text/css">
+            /* http://charliepark.org/bootstrap_buttons/ */
+            </style>
+        
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        
+        <script type="text/javascript" charset="utf-8">
+            function signup () {
+                // validate
+                if (!$("#firstname").val() || /^\s*$/.test($("#firstname").val())) {
+                    alert("Firstname cannot be empty");
+                    return false;
+                }
+                if (!$("#lastname").val() || /^\s*$/.test($("#lastname").val())) {
+                    alert("Lastname cannot be empty");
+                    return false;
+                }
+                if (!$("#email").val() || /^\s*$/.test($("#email").val())) {
+                    alert("Email cannot be empty");
+                    return false;
+                }
+                window.location = 'signup://';
+                return false;
+            }
+            </script>
+    </head>
+    
+    <body>
+        <div class="container">
+            
+            <p>&nbsp;</p>
+            
+            #{dismiss}
+            
+            <form class="form-horizontal" action="" method="POST" onsubmit="return signup();">
+                <fieldset>
+                    <div class="control-group">
+                        <label class="control-label" for="firstname">Firstname</label>
+                        <div class="controls">
+                            <input type="text" class="input-large" name="firstname" id="firstname"/>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="lastname">Lastname</label>
+                        <div class="controls">
+                            <input type="text" class="input-large" name="lastname" id="lastname"/>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="email">Email</label>
+                        <div class="controls">
+                            <input type="email" class="input-large" name="email" id="email"/>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Signup</button>
+                    </div>
+                </fieldset>
+            </form>
+            
+            <a href="loadregister://" class="btn btn-success btn-block">Switch to Registration Flow</a>
+            
+        </div>
+        
+    </body>
+</html>
+

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+
+    <!-- Startups -->
+
+    <servlet>
+        <servlet-name>QuartzInitializer</servlet-name>
+        <servlet-class>org.quartz.ee.servlet.QuartzInitializerServlet</servlet-class>
+        <init-param>
+            <param-name>shutdown-on-unload</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <init-param>
+            <param-name>start-scheduler-on-load</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet>
+        <servlet-name>SchedulerServlet</servlet-name>
+        <servlet-class>com.ringfulhealth.demoapp.jobs.SchedulerServlet</servlet-class>
+        <load-on-startup>2</load-on-startup>
+    </servlet>
+    
+    <!-- Servlets -->
+    
+    <servlet>
+      <servlet-name>LogoutServlet</servlet-name>
+      <servlet-class>com.ringfulhealth.demoapp.servlets.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>LogoutServlet</servlet-name>
+      <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+      <servlet-name>LoginServlet</servlet-name>
+      <servlet-class>com.ringfulhealth.demoapp.servlets.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>LoginServlet</servlet-name>
+      <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+      <servlet-name>MachLoginServlet</servlet-name>
+      <servlet-class>com.ringfulhealth.demoapp.servlets.MachLoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>MachLoginServlet</servlet-name>
+      <url-pattern>/mlogin</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+      <servlet-name>MachSignupServlet</servlet-name>
+      <servlet-class>com.ringfulhealth.demoapp.servlets.MachSignupServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>MachSignupServlet</servlet-name>
+      <url-pattern>/msignup</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+      <servlet-name>RegisterServlet</servlet-name>
+      <servlet-class>com.ringfulhealth.demoapp.servlets.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>RegisterServlet</servlet-name>
+      <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+      <servlet-name>MachRegisterServlet</servlet-name>
+      <servlet-class>com.ringfulhealth.demoapp.servlets.MachRegisterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>MachRegisterServlet</servlet-name>
+      <url-pattern>/mregister</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+      <servlet-name>ResetPasswordServlet</servlet-name>
+      <servlet-class>com.ringfulhealth.demoapp.servlets.ResetPasswordServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>ResetPasswordServlet</servlet-name>
+      <url-pattern>/reset_password</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+      <servlet-name>ActivateEmailServlet</servlet-name>
+      <servlet-class>com.ringfulhealth.demoapp.servlets.ActivateEmailServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>ActivateEmailServlet</servlet-name>
+      <url-pattern>/ae</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+      <servlet-name>ActivatePhoneServlet</servlet-name>
+      <servlet-class>com.ringfulhealth.demoapp.servlets.ActivatePhoneServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>ActivatePhoneServlet</servlet-name>
+      <url-pattern>/ap</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+      <servlet-name>ResendEmailConfirmationServlet</servlet-name>
+      <servlet-class>com.ringfulhealth.demoapp.servlets.ResendEmailConfirmationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>ResendEmailConfirmationServlet</servlet-name>
+      <url-pattern>/resend_email_confirm</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+      <servlet-name>ResendSMSConfirmationServlet</servlet-name>
+      <servlet-class>com.ringfulhealth.demoapp.servlets.ResendSMSConfirmationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>ResendSMSConfirmationServlet</servlet-name>
+      <url-pattern>/resend_sms_confirm</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+      <servlet-name>EventLogServlet</servlet-name>
+      <servlet-class>com.ringfulhealth.vamos.servlets.EventLogServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>EventLogServlet</servlet-name>
+      <url-pattern>/event_log</url-pattern>
+    </servlet-mapping>
+    
+    
+    <!-- Filters -->
+    
+    <filter>
+	<filter-name>SecurityFilter</filter-name>
+	<filter-class>com.ringfulhealth.demoapp.servlets.SecurityFilter</filter-class>
+    </filter>
+    <filter-mapping>
+	<filter-name>SecurityFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+    </filter-mapping>
+    
+    <mime-mapping>
+        <extension>jsp</extension>
+        <mime-type>text/html</mime-type>
+    </mime-mapping>
+
+    <mime-mapping>
+        <extension>html</extension>
+        <mime-type>text/html</mime-type>
+    </mime-mapping>
+
+    <session-config>
+        <session-timeout>1440</session-timeout>
+    </session-config>
+
+</web-app>

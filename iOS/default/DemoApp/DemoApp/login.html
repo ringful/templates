@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <link href="css/bootstrap.css" rel="stylesheet"/>
+        <link href="css/bootstrap-responsive.css" rel="stylesheet"/>
+        
+        <style type="text/css">
+            /* http://charliepark.org/bootstrap_buttons/ */
+        </style>
+        
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        
+        <script type="text/javascript" charset="utf-8">
+            function login () {
+                // validate
+                if (!/^[a-zA-Z0-9\-_]+$/.test($("#username").val())) {
+                    alert("Username cannot be empty, and must only contain letters, numbers, - or _");
+                    return false;
+                }
+                if (!$("#password").val() || /^\s*$/.test($("#password").val())) {
+                    alert("Password cannot be empty");
+                    return false;
+                }
+                window.location = 'login://';
+                return false;
+            }
+        </script>
+    </head>
+    
+    <body>
+        <div class="container">
+            
+            <p>&nbsp;</p>
+            
+            #{dismiss}
+            
+            <form class="form-horizontal" action="" method="POST" onsubmit="return login();">
+                <fieldset>
+                    <div class="control-group">
+                        <label class="control-label" for="username">Username</label>
+                        <div class="controls">
+                            <input type="text" class="input-large" name="username" id="username" autocapitalize="off" autocorrect="off" autocomplete="off"/>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="password">Password</label>
+                        <div class="controls">
+                            <input type="password" class="input-large" name="password" id="password"/>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Login</button>
+                        <p>Do not have an account? <a href="loadregister://">Register</a></p>
+                    </div>
+                </fieldset>
+            </form>
+            
+            <a href="loadsignup://" class="btn btn-success btn-block">Switch to Signup Flow</a>
+            
+        </div>
+        
+    </body>
+</html>
+

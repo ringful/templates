@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <link href="css/bootstrap.css" rel="stylesheet"/>
+        <link href="css/bootstrap-responsive.css" rel="stylesheet"/>
+        
+        <style type="text/css">
+            /* http://charliepark.org/bootstrap_buttons/ */
+            </style>
+        
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        
+        <script type="text/javascript" charset="utf-8">
+            function register () {
+                // validate
+                if (!/^[a-zA-Z0-9\-_]+$/.test($("#username").val())) {
+                    alert("Username cannot be empty, and must only contain letters, numbers, - or _");
+                    return false;
+                }
+                if (!$("#password").val() || /^\s*$/.test($("#password").val())) {
+                    alert("Password cannot be empty");
+                    return false;
+                }
+                if (!$("#email").val() || /^\s*$/.test($("#email").val())) {
+                    alert("Email cannot be empty");
+                    return false;
+                }
+                if (!$("#phone").val() || /^\s*$/.test($("#phone").val())) {
+                    alert("Phone cannot be empty");
+                    return false;
+                }
+                if (!$("#firstname").val() || /^\s*$/.test($("#firstname").val())) {
+                    alert("First name cannot be empty");
+                    return false;
+                }
+                if (!$("#lastname").val() || /^\s*$/.test($("#lastname").val())) {
+                    alert("Last name cannot be empty");
+                    return false;
+                }
+                window.location = 'register://';
+                return false;
+            }
+            </script>
+    </head>
+    
+    <body>
+        <div class="container">
+            
+            <p>&nbsp;</p>
+            
+            #{dismiss}
+            
+            <form class="form-horizontal" action="" method="POST" onsubmit="return register();">
+                <fieldset>
+                    <div class="control-group">
+                        <label class="control-label" for="username">Username</label>
+                        <div class="controls">
+                            <input type="text" class="input-large" name="username" id="username" autocapitalize="off" autocorrect="off" autocomplete="off"/>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="password">Password</label>
+                        <div class="controls">
+                            <input type="password" class="input-large" name="password" id="password"/>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="firstname">Firstname</label>
+                        <div class="controls">
+                            <input type="text" class="input-large" name="firstname" id="firstname"/>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="lastname">Lastname</label>
+                        <div class="controls">
+                            <input type="text" class="input-large" name="lastname" id="lastname"/>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="email">Email</label>
+                        <div class="controls">
+                            <input type="email" class="input-large" name="email" id="email"/>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="phone">Phone</label>
+                        <div class="controls">
+                            <input type="tel" class="input-large" name="phone" id="phone"/>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Register</button>
+                        <p>Already have an account? <a href="loadlogin://">Login</a></p>
+                    </div>
+                </fieldset>
+            </form>
+            
+            <a href="loadsignup://" class="btn btn-success btn-block">Switch to Signup Flow</a>
+            
+        </div>
+        
+    </body>
+</html>
+

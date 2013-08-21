@@ -1,0 +1,77 @@
+body{padding-top:140px}
+.navbar{z-index:900}
+.navbar .nav>li>a {color: #1e95cc}
+.navbar-inverse .nav>li>a{color:#73d4ff;  text-shadow: rgba(0, 0, 0, 0.9) 1px -1px 0px;}
+.navbar .nav > li > a:focus, .navbar .nav > li > a:hover {color:#1fb0f1}
+
+.navbar .brand {padding:5px 20px; background:url(../img/ivamos-logo.png) 30px 5px no-repeat; width:116px; height:70px; overflow:hidden; text-indent:-9999px}
+.navbar .brandempty {background:url(../img/empty-logo.png) 30px 5px no-repeat;}
+
+/*
+.navbar .brand {padding:5px 55px; background:url(../img/vamos-cu-light.png) 30px 5px no-repeat; width:261px; height:110px; overflow:hidden; text-indent:-9999px}
+*/
+.nav-collapse .nav{padding-top:55px; padding-left:0px}
+.nav-collapse .navbar-form{padding-top:55px}
+.nav-collapse.in .navbar-form{padding-top:0px}
+
+.btn-simple{color: #1e95cc}
+.btn-primary{color:#fff!important}
+.btn-simple:hover{color:#d30065; color: #329ecf}
+.btn-simple:focus, .btn-simple:active, .btn-simple.active{background-color:#329ecf; color:#fff; text-shadow: rgba(0, 0, 0, 0.1) 0px -1px 0px;}
+.text-blue{color:#359fd1}
+.text-red{color:#d30065}
+.text-green{color:#388235}
+.text-orange{color:#f8a31f}
+
+.width-standard{display:block; height:0px; line-height:0px; font-size:0px; width:100%}
+.video-quiz .form-horizontal .control-label{font-size:1.2em; font-weight:bold}
+.video-quiz .form-horizontal .control-label, .video-quiz .form-horizontal .controls, .video-quiz .form-horizontal .form-actions{width:100%; float:none; text-align:left; margin-left:0px; padding-left:0px}
+.featured-video{z-index:0; position:relative}
+.video-container{position:relative; z-index:100}
+
+@media (max-width: 979px) {
+	body{padding-top:0px}
+	.nav-collapse .nav {padding-top:0px!important}
+	.navbar-fixed-top .navbar-inner{padding:0px!important}
+	.navbar .btn-navbar{margin-top:20px}
+	.register-page .register-text, register-page .register-form{float:none; width:100%}
+}
+
+.navbar .nav li{  -webkit-box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.125); -moz-box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.125); box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.125); padding-right:10px}
+.navbar .nav li a{ color:#fff;  text-shadow: rgba(0, 0, 0, 0.2) 0px -1px 0px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px;}
+.navbar .nav li a:hover, .navbar .nav li a:active, .navbar .nav li a:focus, .navbar .nav li.active a:hover, .navbar .nav li.active a:active, .navbar .nav li.active a:focus, .navbar .nav li.active a{ color:#fff;}
+.navbar .nav li.blue a{background:rgba(57,186,245,0.4)}
+.navbar .nav li.red a{background:rgba(250,13,126,0.4)}
+.navbar .nav li.green a{background:rgba(50,203,44,0.4)}
+.navbar .nav li.orange a{background:rgba(255,166,27,0.4)}
+.navbar .nav li.blue:hover a, .navbar .nav li.blue:active a, .navbar .nav li.blue:focus a, .navbar .nav li.blue.active a{background:rgba(57,186,245,1)}
+.navbar .nav li.red:hover a, .navbar .nav li.red:active a, .navbar .nav li.red:focus a, .navbar .nav li.red.active a{background:rgba(250,13,126,1)}
+.navbar .nav li.green:hover a, .navbar .nav li.green:active a, .navbar .nav li.green:focus a, .navbar .nav li.green.active a{background:rgba(50,203,44,1)}
+.navbar .nav li.orange:hover a, .navbar .nav li.orange:active a, .navbar .nav li.orange:focus a, .navbar .nav li.orange.active a{background:rgba(255,166,27,1)}
+
+
+.navbar .nav li .dropdown-menu li{ -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; padding:2px 0px}
+.navbar .nav li .dropdown-menu li.nav-header{padding-left:20px}
+.navbar .nav li .dropdown-menu li a{color:#fa0d7e; background:none!important; text-shadow:none}
+.navbar .nav li .dropdown-menu li a:hover, .navbar .nav li .dropdown-menu li a:active, .navbar .nav li .dropdown-menu li a:focus{color:#fff; background:#fa0d7e!important}
+
+.register-form .control-label{text-align:left}
+.site-footer{border-top:1px dashed #555; padding:10px 0px; margin-top:10px; color:#666}
+
+
+.btn-red {
+  background-color: hsl(344, 89%, 30%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f33467", endColorstr="#90082c");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#f33467), to(#90082c));
+  background-image: -moz-linear-gradient(top, #f33467, #90082c);
+  background-image: -ms-linear-gradient(top, #f33467, #90082c);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f33467), color-stop(100%, #90082c));
+  background-image: -webkit-linear-gradient(top, #f33467, #90082c);
+  background-image: -o-linear-gradient(top, #f33467, #90082c);
+  background-image: linear-gradient(#f33467, #90082c);
+  border-color: #90082c #90082c hsl(344, 89%, 23%);
+  color: #fff !important;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.46);
+  -webkit-font-smoothing: antialiased;
+}

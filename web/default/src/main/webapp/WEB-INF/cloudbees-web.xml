@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<cloudbees-web-app xmlns="http://www.cloudbees.com/xml/webapp/1">
+    <appid>myuan/demoapp</appid>
+    <resource name="jdbc/ringfuldemoapp" auth="Container" type="javax.sql.DataSource">  
+        <param name="username" value="ringfuldemoapp" />
+        <param name="password" value="ringfuldemoapp" /> 
+        <param name="url" value="jdbc:mysql://ec2-23-21-211-172.compute-1.amazonaws.com:3306/ringfuldemoapp" />
+        
+        <!-- Connection Pool settings -->
+        <!--
+        <param name="maxActive" value="5" />
+        <param name="maxIdle" value="2" />
+        <param name="maxWait" value="10000" />
+        <param name="removeAbandoned" value="true" />
+        <param name="removeAbandonedTimeout" value="60" />
+        <param name="logAbandoned" value="true" />
+        -->
+        
+        <!-- Purge invalid connections -->
+        <param name="validationQuery" value="SELECT 1" />
+        <param name="testOnBorrow" value="true" />
+    </resource>
+</cloudbees-web-app>
