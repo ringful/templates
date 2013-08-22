@@ -17,10 +17,11 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    self.title = @"Ringful Health";
 }
 
 - (IBAction)changeUser:(id)sender {
@@ -28,7 +29,7 @@
     
     [UIView transitionWithView:appDelegate.window duration:0.5 options: UIViewAnimationOptionTransitionFlipFromLeft animations:^{
         
-        appDelegate.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[SetupController alloc] initWithNibName:@"SetupController" bundle:[NSBundle mainBundle]]];
+        appDelegate.window.rootViewController = [[SetupController alloc] initWithNibName:@"SetupController" bundle:[NSBundle mainBundle]];
         
     } completion:nil];
 }
