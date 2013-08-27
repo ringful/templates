@@ -130,7 +130,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
     
     <servlet>
       <servlet-name>EventLogServlet</servlet-name>
-      <servlet-class>com.ringfulhealth.vamos.servlets.EventLogServlet</servlet-class>
+      <servlet-class>com.ringfulhealth.demoapp.servlets.EventLogServlet</servlet-class>
     </servlet>
     <servlet-mapping>
       <servlet-name>EventLogServlet</servlet-name>

@@ -29,9 +29,9 @@
 		2A37729C17C1D201003AF2BB /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37729317C1D201003AF2BB /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2A3772A017C1D215003AF2BB /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2A37729D17C1D215003AF2BB /* SVProgressHUD.bundle */; };
 		2A3772A117C1D215003AF2BB /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37729F17C1D215003AF2BB /* SVProgressHUD.m */; };
-		2A3772A717C1D226003AF2BB /* SVModalWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3772A317C1D226003AF2BB /* SVModalWebViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2A3772A717C1D226003AF2BB /* SVModalWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3772A317C1D226003AF2BB /* SVModalWebViewController.m */; };
 		2A3772A817C1D226003AF2BB /* SVWebViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2A3772A417C1D226003AF2BB /* SVWebViewController.bundle */; };
-		2A3772A917C1D226003AF2BB /* SVWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3772A617C1D226003AF2BB /* SVWebViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2A3772A917C1D226003AF2BB /* SVWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3772A617C1D226003AF2BB /* SVWebViewController.m */; };
 		2A3772AE17C1D239003AF2BB /* UINavigationController+Rotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3772AB17C1D239003AF2BB /* UINavigationController+Rotation.m */; };
 		2A3772AF17C1D239003AF2BB /* UISplitViewController+Rotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3772AD17C1D239003AF2BB /* UISplitViewController+Rotation.m */; };
 		2A3772B217C1D24D003AF2BB /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3772B117C1D24D003AF2BB /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -65,7 +65,6 @@
 		2A37730A17C1D3E8003AF2BB /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A3772FC17C1D3E8003AF2BB /* libz.dylib */; };
 		2A37730B17C1D3E8003AF2BB /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A3772FD17C1D3E8003AF2BB /* libiconv.dylib */; };
 		2A37730C17C1D3E8003AF2BB /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A3772FE17C1D3E8003AF2BB /* libstdc++.dylib */; };
-		2A37730E17C1D3FD003AF2BB /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A37730D17C1D3FD003AF2BB /* libTestFlight.a */; };
 		2A37731417C1DA7A003AF2BB /* SetupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37731117C1DA7A003AF2BB /* SetupController.m */; };
 		2A37731517C1DA7A003AF2BB /* SetupController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A37731217C1DA7A003AF2BB /* SetupController.xib */; };
 		2A37731617C1DA7A003AF2BB /* login.html in Resources */ = {isa = PBXBuildFile; fileRef = 2A37731317C1DA7A003AF2BB /* login.html */; };
@@ -75,6 +74,8 @@
 		2A37732517C3E97B003AF2BB /* register.html in Resources */ = {isa = PBXBuildFile; fileRef = 2A37732417C3E97B003AF2BB /* register.html */; };
 		2A37732717C3E98A003AF2BB /* signup.html in Resources */ = {isa = PBXBuildFile; fileRef = 2A37732617C3E98A003AF2BB /* signup.html */; };
 		2A37732917C47411003AF2BB /* user.db in Resources */ = {isa = PBXBuildFile; fileRef = 2A37732817C47411003AF2BB /* user.db */; };
+		2A37736917CA76DB003AF2BB /* libFlurry_4.2.3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A37736717CA76DB003AF2BB /* libFlurry_4.2.3.a */; };
+		2A37736A17CA76DB003AF2BB /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A37736817CA76DB003AF2BB /* libTestFlight.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -137,7 +138,6 @@
 		2A3772B717C1D262003AF2BB /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
 		2A3772B817C1D262003AF2BB /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		2A3772B917C1D262003AF2BB /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
-		2A3772C117C1D290003AF2BB /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		2A3772C217C1D2A3003AF2BB /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
 		2A3772C317C1D2A3003AF2BB /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
 		2A3772C417C1D2A3003AF2BB /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
@@ -177,7 +177,6 @@
 		2A3772FC17C1D3E8003AF2BB /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		2A3772FD17C1D3E8003AF2BB /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		2A3772FE17C1D3E8003AF2BB /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
-		2A37730D17C1D3FD003AF2BB /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 		2A37731017C1DA7A003AF2BB /* SetupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupController.h; sourceTree = "<group>"; };
 		2A37731117C1DA7A003AF2BB /* SetupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupController.m; sourceTree = "<group>"; };
 		2A37731217C1DA7A003AF2BB /* SetupController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetupController.xib; sourceTree = "<group>"; };
@@ -189,6 +188,12 @@
 		2A37732417C3E97B003AF2BB /* register.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = register.html; sourceTree = "<group>"; };
 		2A37732617C3E98A003AF2BB /* signup.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = signup.html; sourceTree = "<group>"; };
 		2A37732817C47411003AF2BB /* user.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = user.db; sourceTree = "<group>"; };
+		2A37736317CA76C3003AF2BB /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		2A37736417CA76C3003AF2BB /* TestFlight+AsyncLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+AsyncLogging.h"; sourceTree = "<group>"; };
+		2A37736517CA76C3003AF2BB /* TestFlight+ManualSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+ManualSessions.h"; sourceTree = "<group>"; };
+		2A37736617CA76CD003AF2BB /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
+		2A37736717CA76DB003AF2BB /* libFlurry_4.2.3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_4.2.3.a; sourceTree = "<group>"; };
+		2A37736817CA76DB003AF2BB /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,7 +218,8 @@
 				2A37730A17C1D3E8003AF2BB /* libz.dylib in Frameworks */,
 				2A37730B17C1D3E8003AF2BB /* libiconv.dylib in Frameworks */,
 				2A37730C17C1D3E8003AF2BB /* libstdc++.dylib in Frameworks */,
-				2A37730E17C1D3FD003AF2BB /* libTestFlight.a in Frameworks */,
+				2A37736917CA76DB003AF2BB /* libFlurry_4.2.3.a in Frameworks */,
+				2A37736A17CA76DB003AF2BB /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,7 +263,8 @@
 				2A3772FC17C1D3E8003AF2BB /* libz.dylib */,
 				2A3772FD17C1D3E8003AF2BB /* libiconv.dylib */,
 				2A3772FE17C1D3E8003AF2BB /* libstdc++.dylib */,
-				2A37730D17C1D3FD003AF2BB /* libTestFlight.a */,
+				2A37736717CA76DB003AF2BB /* libFlurry_4.2.3.a */,
+				2A37736817CA76DB003AF2BB /* libTestFlight.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -396,7 +403,9 @@
 		2A3772BE17C1D26A003AF2BB /* TestFlight */ = {
 			isa = PBXGroup;
 			children = (
-				2A3772C117C1D290003AF2BB /* TestFlight.h */,
+				2A37736317CA76C3003AF2BB /* TestFlight.h */,
+				2A37736417CA76C3003AF2BB /* TestFlight+AsyncLogging.h */,
+				2A37736517CA76C3003AF2BB /* TestFlight+ManualSessions.h */,
 			);
 			name = TestFlight;
 			sourceTree = "<group>";
@@ -404,6 +413,7 @@
 		2A3772BF17C1D273003AF2BB /* Flurry */ = {
 			isa = PBXGroup;
 			children = (
+				2A37736617CA76CD003AF2BB /* Flurry.h */,
 			);
 			name = Flurry;
 			sourceTree = "<group>";
@@ -694,6 +704,7 @@
 				2A37724517C138F3003AF2BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

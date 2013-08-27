@@ -32,6 +32,7 @@ public class SecurityFilter implements Filter {
           "register.jsp", "/register", "/mregister", "register_fail.jsp",
           "reset_password.jsp", "/reset_password", 
           "/ap", "/ae",
+          "/event_log",
           ".css", ".js", ".png", ".jpg", ".gif", ".ico", ".eot", ".svg", ".ttf", ".woff", ".txt", ".html" };
     static String[] adminList = new String[] { 
         "admin_index.jsp"
