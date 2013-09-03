@@ -72,27 +72,27 @@
     }
     
     if ([requestString isEqualToString:@"register://"]) {
-        appDelegate.user = [[User alloc] init];
-        appDelegate.user.username = [webView stringByEvaluatingJavaScriptFromString:@"$('#username').val();"];
-        appDelegate.user.password = [webView stringByEvaluatingJavaScriptFromString:@"$('#password').val();"];
-        appDelegate.user.firstname = [webView stringByEvaluatingJavaScriptFromString:@"$('#firstname').val();"];
-        appDelegate.user.lastname = [webView stringByEvaluatingJavaScriptFromString:@"$('#lastname').val();"];
-        appDelegate.user.email = [webView stringByEvaluatingJavaScriptFromString:@"$('#email').val();"];
-        appDelegate.user.phone = [webView stringByEvaluatingJavaScriptFromString:@"$('#phone').val();"];
+        User *user = [[User alloc] init];
+        user.username = [webView stringByEvaluatingJavaScriptFromString:@"$('#username').val();"];
+        user.password = [webView stringByEvaluatingJavaScriptFromString:@"$('#password').val();"];
+        user.firstname = [webView stringByEvaluatingJavaScriptFromString:@"$('#firstname').val();"];
+        user.lastname = [webView stringByEvaluatingJavaScriptFromString:@"$('#lastname').val();"];
+        user.email = [webView stringByEvaluatingJavaScriptFromString:@"$('#email').val();"];
+        user.phone = [webView stringByEvaluatingJavaScriptFromString:@"$('#phone').val();"];
         
         [SVProgressHUD showWithStatus:@"Please wait ..."];
-        [DataManager registerUser:appDelegate.user];
+        [DataManager registerUser:user];
         return NO;
     }
     
     if ([requestString isEqualToString:@"signup://"]) {
-        appDelegate.user = [[User alloc] init];
-        appDelegate.user.firstname = [webView stringByEvaluatingJavaScriptFromString:@"$('#firstname').val();"];
-        appDelegate.user.lastname = [webView stringByEvaluatingJavaScriptFromString:@"$('#lastname').val();"];
-        appDelegate.user.email = [webView stringByEvaluatingJavaScriptFromString:@"$('#email').val();"];
+        User *user = [[User alloc] init];
+        user.firstname = [webView stringByEvaluatingJavaScriptFromString:@"$('#firstname').val();"];
+        user.lastname = [webView stringByEvaluatingJavaScriptFromString:@"$('#lastname').val();"];
+        user.email = [webView stringByEvaluatingJavaScriptFromString:@"$('#email').val();"];
         
         [SVProgressHUD showWithStatus:@"Please wait ..."];
-        [DataManager signupUser:appDelegate.user];
+        [DataManager signupUser:user];
         return NO;
     }
         

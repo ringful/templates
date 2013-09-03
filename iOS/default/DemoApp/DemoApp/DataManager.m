@@ -389,7 +389,11 @@ static FMDatabase *user_db = nil;
             NSDictionary *data = [parser objectWithString:responseString];
             if (data != nil && [@"ok" isEqualToString:[data objectForKey:@"result"]]) {
                 
-                User *user = [[User alloc] init];
+                // The user might already exist
+                User *user = [DataManager getUser];
+                if (user == nil) {
+                    user = [[User alloc] init];
+                }
                 user.username = un;
                 user.password = pass;
                 user.firstname = [data objectForKey:@"firstname"];
@@ -445,7 +449,12 @@ static FMDatabase *user_db = nil;
             NSDictionary *data = [parser objectWithString:responseString];
             if (data != nil && [@"ok" isEqualToString:[data objectForKey:@"result"]]) {
                 
+                User *exist = [DataManager getUser];
+                if (exist) {
+                    user.dbId = 1;
+                }
                 [DataManager saveUser:user];
+                
                 [[NSNotificationCenter defaultCenter] postNotificationName:@"RegisterSuccess" object:nil];
                 
             } else if (data != nil && [@"error" isEqualToString:[data objectForKey:@"result"]]) {
@@ -491,7 +500,15 @@ static FMDatabase *user_db = nil;
             NSDictionary *data = [parser objectWithString:responseString];
             if (data != nil && [@"ok" isEqualToString:[data objectForKey:@"result"]]) {
                 
+                User *exist = [DataManager getUser];
+                if (exist) {
+                    user.dbId = 1;
+                }
                 [DataManager saveUser:user];
+                
+                AppDelegate *appDelegate = (AppDelegate *) [[UIApplication sharedApplication] delegate];
+                appDelegate.user = [DataManager getUser];
+                
                 [[NSNotificationCenter defaultCenter] postNotificationName:@"SignupSuccess" object:nil];
                 
             } else if (data != nil && [@"error" isEqualToString:[data objectForKey:@"result"]]) {
